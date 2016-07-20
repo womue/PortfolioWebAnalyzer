@@ -1,0 +1,12 @@
+<%= stylesheet_link_tag    'application', media: 'all', :"data-turbolinks-track" => true %>
+<%= csrf_meta_tags %>
+<h1>Portfolio Analyzer</h1>
+
+<h3>Analyze Group</h3></br>
+
+<%= params.inspect %>
+
+<p> Extracted number of portfolios: <%= @group_members.length %> </p>
+<p> Available number of portfolios:  <%= @updated_members.length %></p>
+
+

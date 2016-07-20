@@ -1,0 +1,29 @@
+<%= stylesheet_link_tag    'application', media: 'all', :"data-turbolinks-track" => true %>
+<%= csrf_meta_tags %>
+#<%= stylesheet_link_tag "main" %>
+<h1>Portfolio Analyzer</h1>
+
+<h3>Login</h3></br>
+
+<%= form_tag("/analyzer/login", method: "post") do %>
+    <p>
+      <%= label_tag :moodle_login_url, "Moodle Login URL" %><br>
+      <%= text_field_tag :moodle_login_url, "https://www.moopaed.de/moodle/login/index.php", size: 150 %>
+    </p>
+    <p>
+      <%= label_tag :mahara_dashboard_url, "Mahara Dashboard URL"  %><br>
+      <%= text_field_tag :mahara_dashboard_url, "https://www.moopaed.de/moodle/auth/mnet/jump.php?hostid=3", size: 150 %>
+    </p>
+    <p>
+      <%= label_tag :username, "Username" %><br>
+      <%= text_field_tag :username %>
+    </p>
+    <p>
+      <%= label_tag :password, "Password" %><br>
+      <%= password_field_tag :password %>
+    </p>
+    <p>
+      <%= submit_tag('Login')%>
+    </p>
+<% end %>
+
